@@ -6,6 +6,8 @@ body, html, #root {
   width: 100%;
   overflow-x: hidden;
   font-family: orbitron;
+  letter-spacing: 4px;
+  color: white;
 }
 
 .app-container {

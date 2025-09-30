@@ -4,6 +4,9 @@ import SpaceBackground from "./components/SpaceBackground";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
+import Meteors from "./components/Meteors";
+import Asteroids from "./components/Asteroids";
+//import SpaceSimulator from "./components/SpaceSimulator";
 import AboutPage from "./components/AboutPage";
 import "./App.css";
 
@@ -15,9 +18,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/*<Route path="/asteroids" element={<Asteroids />} />
+          <Route path="/asteroids" element={<Asteroids />} />
           <Route path="/meteors" element={<Meteors />} />
-          <Route path="/simulation" element={<Simulation />} />*/}
+          {/*<Route path="/simulation" element={<SpaceSimulator />} />*/}
           <Route path="/about" element={<AboutPage />} />
         </Routes>
         <Footer />

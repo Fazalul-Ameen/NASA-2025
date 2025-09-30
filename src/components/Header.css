@@ -9,7 +9,7 @@
   z-index: 15;
   height: fit-content;
   color: white;
-  background: rgba(0, 0, 0, 0.3); /* slight transparency to see stars behind */
+  background: rgba(0, 0, 0, 0.7); /* slight transparency to see stars behind */
 }
 
 .header h1 a {
