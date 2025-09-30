@@ -1,0 +1,74 @@
+.space-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000; /* pure black */
+  overflow: hidden;
+  z-index: 1; /* base layer */
+}
+
+/* Meteors */
+.meteor {
+  position: absolute;
+  background: linear-gradient(white, transparent);
+  border-radius: 50%;
+  opacity: 0.9;
+  animation-name: meteorMove;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes meteorMove {
+  0% {
+    transform: translate(0, 0) rotate(-135deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-120vw, 120vh) rotate(-135deg);
+    opacity: 0;
+  }
+}
+
+.stars {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    50px 100px white,
+    150px 300px white,
+    300px 400px white,
+    500px 200px white,
+    600px 500px white,
+    800px 100px white,
+    1000px 700px white,
+    1200px 200px white,
+    1400px 400px white,
+    1600px 600px white,
+    200px 50px white,
+    400px 150px white,
+    700px 300px white,
+    900px 500px white,
+    1100px 250px white,
+    1300px 450px white,
+    1500px 650px white,
+    1700px 300px white,
+    1900px 500px white,
+    2100px 700px white;
+  animation: twinkle 2s infinite ease-in-out alternate;
+}
+
+.stars::after {
+  content: " ";
+  position: absolute;
+  top: 1000px;
+  box-shadow: inherit;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
+}
+

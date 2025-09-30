@@ -1,0 +1,10 @@
+/* Footer.css */
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  z-index: 15;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+}

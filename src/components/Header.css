@@ -1,0 +1,45 @@
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  height: fit-content;
+  color: white;
+  background: rgba(0, 0, 0, 0.3); /* slight transparency to see stars behind */
+}
+
+.header h1 a {
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+  color: #00eaff;
+  text-shadow: 0 0 5px #4cc5ea, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #4cc5ea, 0 0 30px #4cc5ea, 0 0 40px #4cc5ea, 0 0 55px #49FF18, 0 0 75px #4cc5ea;
+}
+
+.header nav ul li a:active :focus {
+  color: #00eaff;
+  text-shadow: 0 0 5px #4cc5ea, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #4cc5ea, 0 0 30px #4cc5ea, 0 0 40px #4cc5ea, 0 0 55px #49FF18, 0 0 75px #4cc5ea;
+}
