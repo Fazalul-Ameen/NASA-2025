@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
 import Meteors from "./components/Meteors";
 import Asteroids from "./components/Asteroids";
-//import SpaceSimulator from "./components/SpaceSimulator";
+import Simulation from "./components/Simulation";
 import AboutPage from "./components/AboutPage";
 import "./App.css";
 
@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/asteroids" element={<Asteroids />} />
           <Route path="/meteors" element={<Meteors />} />
-          {/*<Route path="/simulation" element={<SpaceSimulator />} />*/}
+          <Route path="/simulation" element={<Simulation />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
         <Footer />
