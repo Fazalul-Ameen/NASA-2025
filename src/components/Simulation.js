@@ -167,9 +167,6 @@ function Simulation() {
             { mesh: neptuneMesh, radius: 2350, speed: 0.00003, angle: 0 }
         ];
 
-       
-
-        // --- Animation Loop ---
         const animate = () => {
             if (isRevolvingRef.current) {
                 planetOrbits.forEach(planet => {
@@ -187,7 +184,6 @@ function Simulation() {
         };
         renderer.setAnimationLoop(animate);
 
-        // --- Event Handlers ---
         const handleWindowResize = () => {
             camera.aspect = currentMount.clientWidth / currentMount.clientHeight;
             camera.updateProjectionMatrix();
@@ -203,7 +199,6 @@ function Simulation() {
             pointer.y = -(event.clientY / currentMount.clientHeight) * 2 + 1;
             raycaster.setFromCamera(pointer, camera);
             
-            // **FIX APPLIED**: Recursive check and loop to find first valid object.
             const intersects = raycaster.intersectObjects(scene.children, true);
             let foundClickableObject = false;
             for (const intersect of intersects) {
@@ -223,7 +218,6 @@ function Simulation() {
         window.addEventListener('resize', handleWindowResize);
         window.addEventListener('click', onPointerClick);
 
-        // --- Cleanup Function ---
         return () => {
             window.removeEventListener('resize', handleWindowResize);
             window.removeEventListener('click', onPointerClick);
@@ -240,7 +234,7 @@ function Simulation() {
 
     return (
         <div className="simulation-container">
-            <div ref={mountRef} style={{ width: '100%', height: '100%' }} />
+                <div ref={mountRef} style={{ width: '100%', height: '100%' }} />
 
             <div 
                 id="tools" 

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import SpaceBackground from "./components/SpaceBackground";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -11,11 +11,19 @@ import AboutPage from "./components/AboutPage";
 import "./App.css";
 
 function App() {
+  const location = useLocation(); 
+
   return (
     <div className="app-container">
-      <SpaceBackground /> {/* Full-screen animated background */}
+      { location.pathname !== "/simulation" && <SpaceBackground />}
       <div className="overlay-content">
-        <Header />
+        <Header style={
+          location.pathname === "/simulation" ? {
+            position: "absolute",
+            top: 0,
+            right: "-35px"
+          } : {}
+        } />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/asteroids" element={<Asteroids />} />
@@ -23,7 +31,7 @@ function App() {
           <Route path="/simulation" element={<Simulation />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
-        <Footer />
+        { location.pathname !== "/simulation" && <Footer />}
       </div>
     </div>
   );

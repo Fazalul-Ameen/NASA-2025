@@ -1,18 +1,15 @@
-/* Header.css */
-
-/* --- Desktop Styles (your original styles with slight tweaks) --- */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Use responsive padding */
-  padding: 20px 5vw; 
-  position: sticky;
+  padding-right: 50px;
+  width: 100%;
   top: 0;
-  z-index: 1000; /* Needs to be on top of other UI */
+  z-index: 1000;
   color: white;
   background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px); /* Nice glass effect */
+  -webkit-backdrop-filter: blur(5px);;
+  backdrop-filter: blur(5px);
 }
 
 .header h1 a {
@@ -20,6 +17,7 @@
   color: white;
   font-size: 28px;
   font-weight: bold;
+  padding-left: 50px;
 }
 
 .header nav ul {
@@ -34,7 +32,7 @@
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 18px; /* Added for consistency */
+  font-size: 18px;
   transition: color 0.3s;
 }
 
@@ -43,16 +41,14 @@
   text-shadow: 0 0 5px #4cc5ea, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #4cc5ea, 0 0 30px #4cc5ea, 0 0 40px #4cc5ea, 0 0 55px #49FF18, 0 0 75px #4cc5ea;
 }
 
-/* --- Hamburger Menu Icon (hidden on desktop) --- */
 .hamburger {
-  display: none; /* Hidden by default */
+  display: none;
   background: transparent;
   border: none;
   cursor: pointer;
-  display: flex;
   flex-direction: column;
   gap: 5px;
-  z-index: 1001; /* Must be above the nav */
+  z-index: 1001;
 }
 
 .hamburger .bar {
@@ -62,48 +58,41 @@
   transition: all 0.3s ease-in-out;
 }
 
-
-/* --- Media Query for Mobile & Tablet (screens smaller than 768px) --- */
 @media (max-width: 768px) {
   .header {
-    /* Reduce padding on smaller screens */
     padding: 20px;
   }
 
   .hamburger {
-    display: flex; /* Show the hamburger on mobile */
+    display: flex;
   }
 
   .header nav {
-    /* Mobile nav is a full-screen overlay, initially off-screen */
     position: fixed;
     top: 0;
-    right: -100%; /* Start off the screen to the right */
+    right: -100%;
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.9);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     transition: right 0.4s ease-in-out;
-    
-    /* Center the links vertically and horizontally */
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .header nav.nav-active {
-    right: 0; /* Slide the nav into view */
+    right: 0;
   }
 
   .header nav ul {
-    /* Stack the links vertically instead of horizontally */
     flex-direction: column;
     text-align: center;
-    gap: 50px; /* Increase gap for vertical layout */
+    gap: 50px;
   }
 
   .header nav ul li a {
-    /* Make the links bigger for easier tapping */
     font-size: 24px;
   }
 }
