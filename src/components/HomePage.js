@@ -34,7 +34,7 @@ export default function HomePage() {
         <li>Explore trends, frequency, and trajectories of meteors over time.</li>
         <li>Responsive and clean user interface suitable for desktop and mobile.</li>
       </ul>
-      <Link to="/data" className="explore-btn">Explore Simulation</Link>
+      <Link to="/Simulation" className="explore-btn">Explore Simulation</Link>
     </div>
   );
 }
