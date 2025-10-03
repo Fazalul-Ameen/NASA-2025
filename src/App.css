@@ -26,3 +26,24 @@ body, html, #root {
   position: relative;
   z-index: 10;
 }
+
+/* App.css */
+
+/* Default root font size */
+html {
+  font-size: 16px; /* 1rem = 16px on desktop */
+}
+
+/* For tablets and smaller devices */
+@media (max-width: 992px) {
+  html {
+    font-size: 14px; /* 1rem = 14px on tablets */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  html {
+    font-size: 12px; /* 1rem = 12px on mobile */
+  }
+}
