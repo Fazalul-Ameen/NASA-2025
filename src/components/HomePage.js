@@ -34,7 +34,7 @@ export default function HomePage() {
         <li>Responsive and clean user interface suitable for desktop and mobile.</li>
       </ul>
       <br></br>
-      <Link to="/Simulation" className="explore-btn">Explore Simulation</Link>
+      <Link to="/simulation" className="explore-btn">Explore Simulation</Link>
     </div>
   );
 }
