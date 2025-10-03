@@ -1,9 +1,18 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
+
+const navItems = [
+  { path: "/", label: "Home" },
+  { path: "/asteroids", label: "Asteroids" },
+  { path: "/meteors", label: "Meteors" },
+  { path: "/simulation", label: "Simulation" },
+  { path: "/about", label: "About Us" },
+];
 
 export default function Header(props) {
   const [isNavOpen, setNavOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <header className="header" style={props.style}>
@@ -12,11 +21,17 @@ export default function Header(props) {
       </h1>
       <nav className={isNavOpen ? "nav-active" : ""}>
         <ul>
-          <li><Link to="/" onClick={() => setNavOpen(false)}>Home</Link></li>
-          <li><Link to="/asteroids" onClick={() => setNavOpen(false)}>Asteroids</Link></li>
-          <li><Link to="/meteors" onClick={() => setNavOpen(false)}>Meteors</Link></li>
-          <li><Link to="/simulation" onClick={() => setNavOpen(false)}>Simulation</Link></li>
-          <li><Link to="/about" onClick={() => setNavOpen(false)}>About Us</Link></li>
+          {navItems.map(item => (
+            <li key={item.path}>
+              <Link
+                to={item.path}
+                onClick={() => setNavOpen(false)}
+                className={location.pathname === item.path ? "selected" : ""}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
       <button

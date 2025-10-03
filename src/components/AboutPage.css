@@ -1,5 +1,11 @@
 /* AboutPage.css */
+
 .about-page {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
   padding: 50px 20px;
   color: white;
   max-width: 800px;

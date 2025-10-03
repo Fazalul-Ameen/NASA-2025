@@ -1,8 +1,8 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 32vw;
   align-items: center;
-  padding-right: 50px;
   width: 100%;
   top: 0;
   z-index: 1000;
@@ -16,7 +16,6 @@
   text-decoration: none;
   color: white;
   font-size: 28px;
-  font-weight: bold;
   padding-left: 50px;
 }
 
@@ -31,14 +30,38 @@
 .header nav ul li a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
   font-size: 18px;
   transition: color 0.3s;
 }
 
 .header nav ul li a:hover {
-  color: #00eaff;
-  text-shadow: 0 0 5px #4cc5ea, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #4cc5ea, 0 0 30px #4cc5ea, 0 0 40px #4cc5ea, 0 0 55px #49FF18, 0 0 75px #4cc5ea;
+  text-shadow:
+      0 0 0.5px #fff,
+      0 0 1px #fff,
+      0 0 1.5px #fff,
+      0 0 2px #fff;
+}
+
+.selected {
+  color: #39f6ff;
+    text-shadow:
+      0 0 8px #39f6ff,
+      0 0 16px #39f6ff,
+      0 0 32px #00eaff,
+      0 0 48px #00eaff;
+    font-weight: bold;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+.header nav ul li a.selected:hover {
+  color: #39f6ff;
+  text-shadow:
+    0 0 8px #39f6ff,
+    0 0 16px #39f6ff,
+    0 0 32px #00eaff,
+    0 0 48px #00eaff;
+  font-weight: bold;
+  cursor: default;
 }
 
 .hamburger {

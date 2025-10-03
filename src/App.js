@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import SpaceBackground from "./components/SpaceBackground";
 import Header from "./components/Header";
@@ -20,8 +19,8 @@ function App() {
         <Header style={
           location.pathname === "/simulation" ? {
             position: "absolute",
+            width: "100vw",
             top: 0,
-            right: "-35px"
           } : {}
         } />
         <Routes>
