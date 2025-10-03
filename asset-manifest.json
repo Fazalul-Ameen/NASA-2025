@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Fazalul-Ameen/NASA-2025/static/css/main.23628cbc.css",
+    "main.js": "/Fazalul-Ameen/NASA-2025/static/js/main.424ddfc7.js",
+    "index.html": "/Fazalul-Ameen/NASA-2025/index.html",
+    "main.23628cbc.css.map": "/Fazalul-Ameen/NASA-2025/static/css/main.23628cbc.css.map",
+    "main.424ddfc7.js.map": "/Fazalul-Ameen/NASA-2025/static/js/main.424ddfc7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23628cbc.css",
+    "static/js/main.424ddfc7.js"
+  ]
+}
