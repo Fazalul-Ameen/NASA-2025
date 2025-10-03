@@ -19,7 +19,13 @@ function App() {
     <div className={isSimulationPage ? "simulation-layout" : ""}>
       { !isSimulationPage && <SpaceBackground />}
       <div className="overlay-content">
-        <Header />
+        <Header style={
+          location.pathname === "/simulation" ? {
+            position: "absolute",
+            width: "100vw",
+            top: 0,
+          } : {}
+        }/>
         <main className="main-content">
           <Routes>
             <Route path="/" element={<HomePage />} />
