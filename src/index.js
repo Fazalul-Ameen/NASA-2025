@@ -4,7 +4,7 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <HashRouter>
+  <HashRouter basename='/NASA-2025'>
     <App />
   </HashRouter>,
   document.getElementById('root')
