@@ -1,49 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap'); 
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
 * {
+  box-sizing: border-box; /* A best practice for predictable layouts */
   -webkit-tap-highlight-color: transparent;
 }
 
+/* --- Global Styles --- */
+/* This enables scrolling and sets the base styles */
 body, html, #root {
   margin: 0;
   padding: 0;
-  height: 100%;
   width: 100%;
-  overflow: hidden;
-  font-family: orbitron;
-  letter-spacing: 4px;
+  background-color: #000;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
   color: white;
 }
 
-.app-container {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  height: 100%;
+/* Base root font size for rem units */
+html {
+  font-size: 16px;
 }
 
+/* This is the main container for the entire app */
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* This container holds the content that appears OVER the background */
 .overlay-content {
   position: relative;
   z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* App.css */
-
-/* Default root font size */
-html {
-  font-size: 16px; /* 1rem = 16px on desktop */
-}
-
-/* For tablets and smaller devices */
+/* --- Responsive Root Font Size --- */
+/* This makes all 'rem' units scale down on smaller screens */
 @media (max-width: 992px) {
   html {
-    font-size: 14px; /* 1rem = 14px on tablets */
+    font-size: 14px;
   }
 }
 
-/* For mobile phones */
 @media (max-width: 768px) {
   html {
-    font-size: 12px; /* 1rem = 12px on mobile */
+    font-size: 13px;
   }
+}
+
+.main-content {
+  flex-grow: 1; /* This makes the content area fill the available space */
+}
+
+.simulation-layout .overlay-content {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.simulation-layout .main-content {
+  /* Allow the main content (and iframe inside) to grow and fill the space */
+  display: flex;
+  flex-direction: column;
 }
