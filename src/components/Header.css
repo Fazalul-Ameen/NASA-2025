@@ -66,6 +66,19 @@
   transition: all 0.3s ease-in-out;
 }
 
+.logo-icon{
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 @media (max-width: 992px) { /* Adjusted breakpoint */
   .header {
     gap: 10vw;

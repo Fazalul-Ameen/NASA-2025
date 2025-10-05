@@ -15,9 +15,14 @@ export default function Header(props) {
 
   return (
     <header className="header" style={props.style}>
-      <h1>
-        <Link to="/" onClick={() => setNavOpen(false)}>🌠 Meteor Madness</Link>
-      </h1>
+      <div className="header-title">
+        <img className="logo-icon" src="./fav_icon.png" alt="Logo" />
+        <h1>
+          <Link to="/" onClick={() => setNavOpen(false)}>
+            Meteor Madness
+          </Link>
+        </h1>
+      </div>
       <nav className={isNavOpen ? "nav-active" : ""}>
         <ul>
           {navItems.map(item => (

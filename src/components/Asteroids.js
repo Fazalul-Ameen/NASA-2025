@@ -71,7 +71,7 @@ function Asteroids() {
         return (
             <div key={asteroid.id} className={`card ${isHazardous ? 'hazardous' : 'non-hazardous'}`}>
                 <div className="flex-row">
-                    <img src="https://placehold.co/100x100/1e293b/FFFFFF?text=ASTEROID" alt="Asteroid" />
+                    <img src="https://eyes.nasa.gov/apps/asteroids/assets/svg/rock.svg" alt="Asteroid" />
                     <div>
                         <h3>{asteroid.name}</h3>
                         <p className="jpl-id">JPL ID: {asteroid.neo_reference_id}</p>
