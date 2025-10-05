@@ -10,8 +10,6 @@ function Asteroids() {
     const [message, setMessage] = useState("Please select a date and click 'Search Asteroids' to get started.");
     const [asteroids, setAsteroids] = useState([]);
 
-    const apiKey = 'DEMO_KEY';
-
     const fetchAsteroids = async (selectedDate) => {
         setLoading(true);
         setMessage('');
@@ -47,7 +45,7 @@ function Asteroids() {
 
     useEffect(() => {
         fetchAsteroids(date);
-    }, []);
+    }, [date]);
 
     const handleSearch = () => {
         if (date) {
@@ -61,7 +59,6 @@ function Asteroids() {
         const isHazardous = asteroid.is_potentially_hazardous_asteroid;
         const riskText = isHazardous ? 'High' : 'Low';
         const riskEmoji = isHazardous ? '⚠' : '✅';
-        const cardClass = isHazardous ? 'hazardous' : 'non-hazardous';
         const minDiameterKm = asteroid.estimated_diameter.kilometers.estimated_diameter_min.toFixed(2);
         const maxDiameterKm = asteroid.estimated_diameter.kilometers.estimated_diameter_max.toFixed(2);
         const closeApproach = asteroid.close_approach_data[0];
