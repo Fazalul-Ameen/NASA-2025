@@ -7,7 +7,7 @@ function Asteroids() {
         return today;
     });
     const [loading, setLoading] = useState(false);
-    const [message, setMessage] = useState("Please select a date and click 'Search Asteroids' to get started.");
+    const [message, setMessage] = useState("Please select a date and click 'Search Asteroids'.");
     const [asteroids, setAsteroids] = useState([]);
 
     const fetchAsteroids = async (selectedDate) => {
