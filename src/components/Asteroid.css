@@ -41,6 +41,9 @@ section {
     background-color: #393939; /* bg-gray-800 */
     border-radius: 0.5rem;
     border: 1px solid #374151; /* border-gray-700 */
+    position: sticky;
+    top: 1.5rem;
+    z-index: 999;
 }
 
 .section-date h2 {

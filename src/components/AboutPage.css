@@ -2,7 +2,7 @@
 
 .about-page {
   display: flex;
-  height: 100vh;
+  height: 70vh;
   flex-direction: column;
   justify-content:center;
   align-items: center;

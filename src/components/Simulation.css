@@ -1,5 +1,6 @@
 /* src/components/Simulation.css */
 .simulation-frame {
     width: 100%;
-    
+    height: 85vh;
+    top: 0;
 }

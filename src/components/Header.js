@@ -5,7 +5,6 @@ import "./Header.css";
 const navItems = [
   { path: "/", label: "Home" },
   { path: "/asteroids", label: "Asteroids" },
-  { path: "/meteors", label: "Meteors" },
   { path: "/simulation", label: "Simulation" },
   { path: "/about", label: "About Us" },
 ];

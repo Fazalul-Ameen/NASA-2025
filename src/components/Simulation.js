@@ -6,7 +6,6 @@ function Simulation() {
             title="simulation"
             src= {srcUrl}
             className="simulation-frame"
-            style={{ width: "100%", height: "100vh", border: "none" }}
         />
     );
 }
